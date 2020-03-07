@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import App from "./component/app/component/App";
 import * as serviceWorker from "./serviceWorker";
 
 // Provider wrap the <App /> to let all the application to have access to it

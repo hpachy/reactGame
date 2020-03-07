@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import walkerSprite from "../../../Sprite/player_walk.png";
+import walkerSprite from "../../../Sprite/player/player_walk.png";
 
 interface Props {
   position: {
@@ -26,8 +26,6 @@ export default class Player extends Component<Props, State> {
           height: "40px"
         }}
       />
-      //     <h1>toto</h1>
-      //   </div>
     );
   }
 }

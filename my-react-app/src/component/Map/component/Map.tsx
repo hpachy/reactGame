@@ -1,25 +1,31 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import MapRow from "./features/MapRow";
 
 interface Props {
-    
+  tiles: number[][];
 }
 interface State {
-    
+  tiles: number[][];
 }
 
 export default class Map extends Component<Props, State> {
-    state = {}
+  state = {
+    tiles: []
+  };
 
-    render() {
-        return (
-            <div
-            style={{
-                width: '800px',
-                height: '600px',
-                backgroundColor: 'green',
-                border: '4px solid brown'
-            }}
-            />
-        )
-    }
+  render() {
+    const { tiles } = this.props;
+    return tiles !== null ? (
+      <div
+        style={{
+          width: "800px",
+          height: "600px"
+        }}
+      >
+        {tiles.map((row: number[]) => (
+          <MapRow tiles={row} />
+        ))}
+      </div>
+    ) : null;
+  }
 }
